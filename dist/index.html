@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>PX to REM Converter</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <h1 class="logo">PX-<span>REM</span></h1>
+        </div>
+
+        <div class="menu">
+          <span class="menuSpan"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="navigation-menu">
+      <div class="navigation-menu-box">
+        <ul>
+          <hr />
+          <li><a href="" class="shareALink">Share on Facebook</a></li>
+          <li><a href="" class="shareALink">Share on Twitter</a></li>
+          <li><a href="" class="shareALink">Share on Linkedin</a></li>
+          <li><a href="" class="shareALink">Share by Email</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Header section ends -->
+
+    <div class="hero-section">
+      <h2>PX to REM converter</h2>
+
+      <div class="input-holder">
+        <div class="pixel-box">
+          <label for="number">Pixels</label>
+          <input
+            type="number"
+            id="numb"
+            placeholder="px"
+            class="px"
+            oninput="pixelEl()"
+          />
+        </div>
+
+        <button>
+          <img src="./img/iconmonstr-arrow-59.svg" alt="swap" title="swap" />
+        </button>
+
+        <div class="rem-box">
+          <label for="rem">REM</label>
+          <input
+            type="number"
+            id="rem"
+            placeholder="rem"
+            class="rm"
+            oninput="remEl()"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero section ends -->
+
+    <footer>
+      <div class="footer-box">
+        <div class="text-box">
+          <p>Contact</p>
+          <p>Version: 0.0.1</p>
+          <p><a href="#">Follow Me On Twitter</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app/app.js"></script>
+  </body>
+</html>

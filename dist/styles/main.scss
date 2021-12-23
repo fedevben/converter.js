@@ -1,0 +1,220 @@
+:root {
+  --fontColor: #333333;
+  --bg: #fdfdfd;
+  --inputBorder: #ededed;
+  --inputColor: #1a79ff;
+  --footerBg: #f4f4f4;
+  --navMenu: #000;
+}
+
+@font-face {
+  font-family: "merchant_copyregular";
+  src: url("./webfontkit-20211223-080910/merchant_copy-webfont.woff2")
+      format("woff2"),
+    url("./webfontkit-20211223-080910/merchant_copy-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "merchant_copyregular";
+}
+
+html,
+body {
+  background-color: var(--bg);
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin menu-spans {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: var(--fontColor);
+  transition: all 0.3s ease;
+}
+
+.openNav {
+  display: flex !important;
+}
+
+/* General styling ends */
+
+.navigation-menu {
+  display: none;
+
+  .navigation-menu-box {
+    position: fixed;
+    background-color: #f7f7f7;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+
+    .shareALink {
+      font-size: 25px;
+    }
+
+    ul li {
+      list-style: none;
+
+      a {
+        color: var(--fontColor);
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* Navigation styling ends */
+
+header {
+  height: 60px;
+
+  nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--fontColor);
+
+  span {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  span {
+    transform: translateY(11px);
+    @include menu-spans();
+
+    &::before {
+      content: "";
+      @include menu-spans();
+      transform: translateY(-9px);
+    }
+
+    &::after {
+      content: "";
+      @include menu-spans();
+      transform: translateY(9px);
+    }
+  }
+}
+
+/* Header styling ends */
+
+.hero-section {
+  height: 545px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--fontColor);
+  }
+
+  .input-holder {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      img {
+        width: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .pixel-box,
+  .rem-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  label[for="number"],
+  label[for="rem"] {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--fontColor);
+  }
+
+  input[type="number"] {
+    height: 60px;
+    width: 350px;
+    padding-left: 50px;
+    padding-right: 50px;
+    outline: none;
+    border: 2px solid var(--inputBorder);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--inputColor);
+  }
+}
+
+/* Hero styling ends */
+
+footer {
+  height: 80px;
+  background-color: var(--footerBg);
+  border-top: 2px ridge var(--inputBorder);
+
+  .footer-box {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .text-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      height: 70px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* Media Queries */
+
+@import "_mobile";

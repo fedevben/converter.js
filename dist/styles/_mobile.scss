@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .input-holder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-box {
+    justify-content: space-around;
+  }
+}
