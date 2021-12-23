@@ -281,5 +281,8 @@ footer .footer-box .text-box p {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  input[type="number"] {
+    width: 300px !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
